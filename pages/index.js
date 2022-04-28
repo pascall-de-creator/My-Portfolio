@@ -88,7 +88,7 @@ const Home = (data) => {
     }, 5000);
 
     showServiceDetails('frontend')
-  },[])
+  })
   const renderRepos = (repos) => {
     var rendredRepos = []
     var sortedRepo = repos.data.slice(0);
