@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Image from 'next/image'
+import Head from 'next/head'
 
 const Home = () => {
   const [role, setRole] = useState('Developer')
@@ -18,6 +19,9 @@ const Home = () => {
 
   return (
     <>
+      <Head>
+        <title>Pascall de creator | Home</title>
+      </Head>
       <section className="h-screen w-screen flex aurora-outer">
         <div className="container mx-auto flex flex-col items-center justify-center overflow-hidden">
           <h1 className='text-3xl md:text-5xl text-center text-white w-10/12 leading-normal'>Hi, I Am Pascal Nkornyui And I Am A<br/><span className='text-blue-800'>{role}</span></h1>
