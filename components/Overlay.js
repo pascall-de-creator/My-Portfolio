@@ -30,7 +30,6 @@ const Overlay = () => {
         setTheme(window.localStorage.theme)
         document.getElementsByTagName('html')[0].classList.add(theme)
     }
-
     useEffect(() => {
         setRoute(window.location.pathname.split('/')[1])
     },[route])

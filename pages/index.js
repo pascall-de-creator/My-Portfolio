@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import Image from 'next/image'
 
 const Home = () => {
+  const [role, setRole] = useState('Developer')
+
   useEffect(() => {
     var roles = ["Fullstack Developer", "Frontend Developer", "Backend Developer", "Software Engineer", "UI/UX Designer"];
     var roleIndex = 0;
@@ -13,7 +15,7 @@ const Home = () => {
       }
     }, 5000);
   },[])
-  
+
   return (
     <>
       <div className="h-screen overflow-y-scroll">
