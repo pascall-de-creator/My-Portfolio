@@ -18,14 +18,12 @@ const Home = () => {
 
   return (
     <>
-      <div className="h-screen overflow-y-scroll">
-        <section className="h-screen w-screen flex aurora-outer">
-          <div className="container mx-auto flex flex-col items-center justify-center overflow-hidden">
-            <h1 className='text-3xl md:text-5xl text-center text-white w-10/12 leading-normal'>Hi, I Am Pascal Nkornyui And I Am A<br/><span className='text-blue-800'>{role}</span></h1>
-            <div className='relative -bottom-[100px] animate-bounce'><Image src="/mouse.svg" alt="scroll" width={50} height={50} /></div>
-          </div>
-        </section>
-      </div>
+      <section className="h-screen w-screen flex aurora-outer">
+        <div className="container mx-auto flex flex-col items-center justify-center overflow-hidden">
+          <h1 className='text-3xl md:text-5xl text-center text-white w-10/12 leading-normal'>Hi, I Am Pascal Nkornyui And I Am A<br/><span className='text-blue-800'>{role}</span></h1>
+          <div className='relative -bottom-[100px] animate-bounce'><Image src="/mouse.svg" alt="scroll" width={50} height={50} /></div>
+        </div>
+      </section>
     </>
   );
 }
