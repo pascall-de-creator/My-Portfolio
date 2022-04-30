@@ -36,7 +36,7 @@ const Overlay = () => {
     },[route])
     useEffect(() => {
         toogleTheme(1)
-    })
+    },[])
     
 
     return ( 

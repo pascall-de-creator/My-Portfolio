@@ -7,9 +7,13 @@ import { MdOutlineKeyboardArrowRight, MdWeb } from 'react-icons/md';
 import { AiOutlineMobile, AiOutlineFieldTime, AiFillPhone, AiOutlineAim, AiFillHeart, AiFillHighlight, AiTwotoneCode } from 'react-icons/ai';
 
 export const getServerSideProps = async() => {
-  const res = await fetch(`https://api.github.com/users/pascall-de-creator/repos`)
-  const data = await res.json()
-  return { props: { data } }
+  // const res = await fetch(`https://api.github.com/users/pascall-de-creator/repos`)
+  // const data = await res.json()
+  return { 
+    props: { 
+      data : {}
+    } 
+  }
 }
 
 const Home = (data) => {
@@ -20,14 +24,13 @@ const Home = (data) => {
   const [activeServiceDetail, setActiveServiceDetail] = useState('')
 
   const showServiceDetails = (service) => {
-    headers = ["", "", ""]
-    paragraphs = ["", ""]
-    activeServiceDetail = ""
+    let headers = ["", "", ""]
+    let paragraphs = ["", ""]
 
     if (service == 'fullstack'){
       activeServiceDetail = 'fullstack'
       headers[0] = "Full Stack Dev"
-      headers[1] = "text-2xl text-primary mt-4'>What Is Full Stack Development?"
+      headers[1] = "What Is Full Stack Development?"
       paragraphs[0] = "It refers to the development of both front end(client side) and back end(server side) portions of web application, the client side deals with the interface users see and interact with and the server side deals with APIs databases etc."
       headers[2] = "Why Me?"
       paragraphs[0] = "I will be a very good or even the best pick for full stack development because, I priovide interactive, beautiful, and secure websites while making it fast for users on the web." 
@@ -72,9 +75,9 @@ const Home = (data) => {
       headers[2] = "Why Me?"
       paragraphs[1] = "I will be a very good or even the best pick for desktop development because, I priovide interactive beautiful and creative desktop applications."
     }
-    setActiveServiceDetail(activeServiceDetail)
     setServiceHeadings(headers)
     setServiceParagraphs(paragraphs)
+    setActiveServiceDetail(service)
   }
   useEffect(() => {
     var roles = ["Fullstack Developer", "Frontend Developer", "Backend Developer", "Software Engineer", "UI/UX Designer"];
@@ -88,35 +91,35 @@ const Home = (data) => {
     }, 5000);
 
     showServiceDetails('frontend')
-  })
-  const renderRepos = (repos) => {
-    var rendredRepos = []
-    var sortedRepo = repos.data.slice(0);
-    sortedRepo.sort(function(a,b) {
-        return a.stargazers_count - b.stargazers_count;
-    });
-    for (let index = 0; index < 4; index++) {
-      if (sortedRepo[index].description != null){
-        var repo = ( 
-          <Link href={sortedRepo[index].html_url}>
-            <a>
-              <div className="w-[220px] p-4 min-h-30 h-max bg-gray-100 dark:bg-slate-700 rounded-md shadow-md hover:scale-110">
-                <h1 className='text-xl text-primary'>{sortedRepo[index].name}</h1>
-                <p className='text-md leading-loose mt-2 dark:text-white'>{sortedRepo[index].description}</p>
-              </div>
-            </a>
-          </Link> 
-        )
-        rendredRepos.push(repo)
-      } else {
-        index -= 1
-      }
-    }
-    return rendredRepos
-  }
+  },[])
+  // const renderRepos = (repos) => {
+  //   var rendredRepos = []
+  //   var sortedRepo = repos.data.slice(0);
+  //   sortedRepo.sort(function(a,b) {
+  //       return a.stargazers_count - b.stargazers_count;
+  //   });
+  //   for (let index = 0; index < 4; index++) {
+  //     if ( sortedRepo[index].description != null ){
+  //       var repo = ( 
+  //         <Link href={ sortedRepo[index].html_url }>
+  //           <a>
+  //             <div className="w-[220px] p-4 min-h-30 h-max bg-gray-100 dark:bg-slate-700 rounded-md shadow-md hover:scale-110">
+  //               <h1 className='text-xl text-primary'>{ sortedRepo[index].name }</h1>
+  //               <p className='text-md leading-loose mt-2 dark:text-white'>{ sortedRepo[index].description }</p>
+  //             </div>
+  //           </a>
+  //         </Link> 
+  //       )
+  //       rendredRepos.push(repo)
+  //     } else {
+  //       index -= 1
+  //     }
+  //   }
+  //   return rendredRepos
+  // }
   return (
     <>
-      <div className="h-screen overflow-y-scroll md:snap-mandatory snap-y">
+      <div className="h-screen overflow-y-scroll md:snap-//#endregionmandatory snap-y">
         <section className="h-screen w-screen flex aurora-outer snap-start">
           <div className="container mx-auto flex flex-col items-center justify-center overflow-hidden">
             <h1 className='text-2xl md:text-5xl text-center text-white w-10/12 leading-normal'>Hi, I Am Pascal Nkornyui And I Am A <span className='text-blue-800'>{role}</span></h1>
@@ -160,7 +163,7 @@ const Home = (data) => {
                 </a>
               </div>
             </div>
-            <div id="service-detail" className="px-10 md:m-0 md:w-6/12 flex flex-col ">
+            <div id="service-detail" className="px-10 mt-5 md:mt-0 md:m-0 md:w-6/12 flex flex-col ">
               <h1 className='text-4xl text-primary'>{ serviceHeadings[0] }</h1>
               <h3 className='text-2xl text-primary mt-4'>{ serviceHeadings[1] }</h3>
               <p className='text-md leading-loose mt-2 dark:text-white'>{ serviceParagraphs[0] }</p>
@@ -215,7 +218,24 @@ const Home = (data) => {
         <section className="h-max w-screen flex snap-start">
           <div className="px-10 md:px-5 container mx-auto my-5">
             <h1 className='text-3xl text-primary'>Some Of My Work.</h1>
-            <div className="grid grid-flow-rows grid-cols-4 gap-5 mt-5">{ renderRepos(data) }</div>
+            <div className="grid grid-flow-rows grid-cols-4 gap-5 mt-5">
+              {/* { renderRepos(data) } */}
+            </div>
+          </div>
+        </section>
+        <section className="h-max w-screen flex snap-start">
+          <div className="px-10 md:px-5 container mx-auto my-5">
+            <h1 className='text-3xl text-primary'>Some Of My Work.</h1>
+          </div>
+        </section>
+        <section className="h-max w-screen flex snap-start">
+          <div className="px-10 md:px-5 container mx-auto my-5">
+            <h1 className='text-3xl text-primary'>Some Of My Work.</h1>
+          </div>
+        </section>
+        <section className="h-max w-screen flex snap-start">
+          <div className="px-10 md:px-5 container mx-auto my-5">
+            <h1 className='text-3xl text-primary'>Some Of My Work.</h1>
           </div>
         </section>
       </div>
