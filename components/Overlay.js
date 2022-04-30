@@ -38,7 +38,6 @@ const Overlay = () => {
         toogleTheme(1)
     },[])
     
-
     return ( 
         <>
             <div className="fixed bottom-4 bg-white dark:bg-slate-900 backdrop-blur-md opacity-90 rounded-md shadow-2xl p-1 flex">
