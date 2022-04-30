@@ -45,3 +45,8 @@ body {
         background-position: left top;
     }
 }
+@media (min-width: 1024px){
+    .container {
+        max-width: 1000px;
+    }
+}
