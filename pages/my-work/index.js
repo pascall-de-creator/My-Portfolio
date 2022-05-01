@@ -10,4 +10,4 @@ const MyWork = () => {
     );
   }
    
-  export default Home;
+  export default MyWork;

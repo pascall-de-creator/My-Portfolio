@@ -10,4 +10,4 @@ const Gallary = () => {
     );
   }
    
-  export default Home;
+  export default Gallary;

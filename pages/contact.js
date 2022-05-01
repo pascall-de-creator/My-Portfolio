@@ -10,4 +10,4 @@ const Contact = () => {
     );
   }
    
-  export default Home;
+  export default Contact;

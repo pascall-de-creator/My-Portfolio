@@ -21,7 +21,7 @@ const Home = () => {
         for (let index = 0; index < 8; index++) {
           let repoCardComp = (
               <Link href={data[index].html_url}>
-                <a className="p-4 bg-gray-50 dark:bg-slate-700 rounded-md shadow-md flex flex-col items-center hover:scale-105 cursor-pointer">
+                <a key={ data[index].id } className="p-4 bg-gray-50 dark:bg-slate-700 rounded-md shadow-md flex flex-col items-center hover:scale-105 cursor-pointer">
                   <div className="w-max h-max p-4 mb-2 rounded-full bg-primary text-white text-xl"><FaCode /></div>
                   <h3 className='text-xl text-primary mb-2 text-center'>{ data[index].name }</h3>
                   <p className='text-base dark:text-white text-center text-ellipsis overflow-hidden w-full max-h-[4.5rem]'>{ data[index].description != null? data[index].description : `This Repository does not have a description yet click for the readme` }</p>
@@ -137,7 +137,7 @@ const Home = () => {
               <p className='text-base dark:text-white text-center'>Always updated on relevant information and important trends</p>
             </div>
           </div>
-          <Link href="/about"><a className="flex items-center dark:text-white text-md p-2 border-2 border-gray-500 border-dashed rounded-md mb-5 focus:outline-none focus:border-primary focus:border-solid hover:bg-primary"><span className="mr-2">See More</span><MdOutlineOpenInNew /></a></Link>
+          <Link href="/about"><a className="flex items-center dark:text-white text-md p-2 border-2 border-gray-500 border-dashed rounded-md mb-5 focus:outline-none focus:border-primary focus:border-solid hover:bg-primary"><span className="mr-2">More About Me</span><MdOutlineOpenInNew /></a></Link>
         </div>
       </section>
       <section className="w-screen">
@@ -149,7 +149,7 @@ const Home = () => {
             <div className="grid grid-flow-row grid-cols-2 md:grid-cols-4 gap-2 md:gap-4 p-2 m-3 mb-5">
               { renderedRepos }
             </div>
-            <Link href="/my-work"><a className="mx-auto flex w-max items-center dark:text-white text-md p-2 border-2 border-gray-500 border-dashed rounded-md mb-5 focus:outline-none focus:border-primary focus:border-solid hover:bg-primary"><span className="mr-2">See More</span><MdOutlineOpenInNew /></a></Link>
+            <Link href="/my-work"><a className="mx-auto flex w-max items-center dark:text-white text-md p-2 border-2 border-gray-500 border-dashed rounded-md mb-5 focus:outline-none focus:border-primary focus:border-solid hover:bg-primary"><span className="mr-2">See More Of My Work</span><MdOutlineOpenInNew /></a></Link>
           </>
           :
           <div className="flex flex-col items-center justify-center">

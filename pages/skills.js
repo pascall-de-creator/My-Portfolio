@@ -10,4 +10,4 @@ const Skills = () => {
     );
   }
    
-  export default Home;
+  export default Skills;

@@ -10,4 +10,4 @@ const Achivement = () => {
     );
   }
    
-  export default Home;
+  export default Achivement;
