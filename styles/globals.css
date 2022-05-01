@@ -21,7 +21,7 @@
   background: #555;
 }
 body {
-    @apply bg-white dark:bg-slate-800
+    @apply bg-gray-100 dark:bg-slate-800
 }
 .aurora-outer {
     background: linear-gradient(45deg, #7eb6b2  0%, #73b3e4 49%, #ca7bee 82%);
