@@ -153,7 +153,6 @@ const Home = () => {
           </>
           :
           <div className="flex flex-col items-center justify-center">
-            <h3 className='text-xl text-center dark:text-wite my-5'>Hmmm, Looks like we could not load the info</h3>
             <button className="p-2 flex items-center bg-primary text-white rounded-md mb-5 hover:bg-cyan-500" onClick={() => LoadRepos()} ><span>{ !isfetching && "Retry" }</span>{isfetching? <div className="animate-spin"><FaSpinner /></div> : <div className="ml-2"><FaArrowCircleDown /></div> }</button>
           </div>
           }
