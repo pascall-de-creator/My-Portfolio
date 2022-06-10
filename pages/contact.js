@@ -12,11 +12,11 @@ const Contact = () => {
         </Head>
         <section className="w-screen aurora-outer h-screen flex flex-col justify-center ">
           <div className="py-10 container mx-auto flex flex-col items-center justify-center">
-            <form action="mailto:pascall.de.creator@outlook.com" method="post" encType="text/plain" className="w-8/12 p-4 bg-white dark:bg-slate-800 rounded-md shadow-md">
+            <form action="mailto:pascall.de.creator@outlook.com" method="post" encType="text/plain" className="w-8/12 p-4 bg-slate-800 rounded-md shadow-md">
               <div className="w-max h-max mx-auto relative -top-[40px] p-4 bg-primary rounded-full text-white"><FaEnvelopeOpen /></div>
               <h2 className='w-full text-xl text-primary mb-2 text-center -mt-9'>Get In Touch</h2>
               <label htmlFor="mail-area" className='sr-only'>Body</label>
-              <textarea className="w-full p-2 border-2 focus:outline-none focus:ring-2 md:min-h-[230px] dark:bg-slate-800 dark:text-white rounded-md border-gray-500" name="mail" id="mail-area"></textarea>
+              <textarea className="w-full p-2 border-2 focus:outline-none focus:ring-2 md:min-h-[230px] bg-slate-800 text-white rounded-md border-gray-500" name="mail" id="mail-area"></textarea>
               <button className="p-2 mx-auto rounded-md flex items-center bg-primary hover:bg-cyan-500 focus:outline-none focus:ring-2 text-white"><p className="mr-2">Send</p><FaPaperPlane /> </button>
             </form>
             <div className="flex mt-5">

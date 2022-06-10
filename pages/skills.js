@@ -4,8 +4,11 @@ const Skills = () => {
     return (
       <>
         <Head>
-          <title>Pascall de creator | About me</title>
+          <title>Pascall de creator | Skills</title>
         </Head>
+        <div>
+          
+        </div>
       </>
     );
   }

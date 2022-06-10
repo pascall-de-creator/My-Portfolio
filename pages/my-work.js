@@ -18,10 +18,10 @@ const MyWork = () => {
         for (let index = 0; index < data.length; index++) {
           let repoCardComp = (
               <Link href={data[index].html_url}>
-                <a key={ data[index].id } className="p-4 bg-gray-50 dark:bg-slate-700 rounded-md shadow-md flex flex-col items-center hover:scale-105 cursor-pointer">
+                <a key={ data[index].id } className="p-4 bg-slate-700 rounded-md shadow-md flex flex-col items-center hover:scale-105 cursor-pointer">
                   <div className="w-max h-max p-4 mb-2 rounded-full bg-primary text-white text-xl"><FaCode /></div>
                   <h3 className='text-xl text-primary mb-2 text-center'>{ data[index].name }</h3>
-                  <p className='text-base dark:text-white text-center text-ellipsis overflow-hidden w-full max-h-[4.5rem]'>{ data[index].description != null? data[index].description : `This Repository does not have a description yet click for the readme` }</p>
+                  <p className='text-base text-white text-center text-ellipsis overflow-hidden w-full max-h-[4.5rem]'>{ data[index].description != null? data[index].description : `This Repository does not have a description yet click for the readme` }</p>
                 </a>
               </Link>
           )
@@ -48,7 +48,7 @@ const MyWork = () => {
       </Head>
       <section className="container mx-auto flex flex-col items-center">
         <p className="text-3xl text-primary ml-2 h-max mt-5">Gallary</p>
-        <div className="container mx-auto flex flex-col items-center justify-center overflow-hidden">
+        <div className="container mx-auto flex flex-col items-center justify-center overflow-hidden pb-[95px]">
           {
           isfetchSuccessful?
           <>

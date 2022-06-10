@@ -20,14 +20,24 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+
+
 body {
     @apply bg-gray-100 dark:bg-slate-800
+}
+nav {
+    @apply w-screen bottom-0 rounded-none sm:w-max fixed sm:bottom-4 sm:rounded-lg sm:opacity-90 bg-slate-900 backdrop-blur-md shadow-2xl p-1 flex items-center justify-around
 }
 .aurora-outer {
     background: linear-gradient(45deg, #7eb6b2  0%, #73b3e4 49%, #ca7bee 82%);
     background-size: 200%;
     animation: aurora 10s infinite;
 }
+.nav-item {
+    @apply text-lg mx-1 p-2 sm:text-3xl sm:mx-2 sm:p-4 bg-slate-900 text-white rounded-md hover:-translate-y-5 hover:scale-110 hover:shadow-md hover:text-primary hover:opacity-100
+}
+
+
 @keyframes aurora {
     0% {
         background-position: left top;
