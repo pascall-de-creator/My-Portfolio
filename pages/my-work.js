@@ -46,9 +46,9 @@ const MyWork = () => {
       <Head>
         <title>Pascall de creator | My Works</title>
       </Head>
-      <section className="container mx-auto flex flex-col items-center">
-        <p className="text-3xl text-primary ml-2 h-max mt-5">Gallary</p>
-        <div className="container mx-auto flex flex-col items-center justify-center overflow-hidden pb-[95px]">
+      <section className="w-screen bg-slate-800 min-h-screen mx-auto flex flex-col items-center">
+        <p className="text-3xl text-primary h-max mt-5">Gallary</p>
+        <div className="container min-h-[80vh] mx-auto flex flex-col items-center justify-center overflow-hidden pb-[95px]">
           {
           isfetchSuccessful?
           <>
