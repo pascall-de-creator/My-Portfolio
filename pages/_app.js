@@ -13,7 +13,7 @@ function MyApp({ Component, pageProps }) {
         <meta name="description" content="Pascal Nkornyui Developer Portfolio . Best Developer for frontend backend and fullstack developing . Pascall de creator . Pascall de developer ." />
         <meta name="keywords" content="Portfolio , developer , best , frontend - front end development , backend - back end developing , full stack development , pascall de crreator , pascall de developer , pascal nkornyui" /> 
       </Head>
-      <div className='flex flex-col items-center'>
+      <div className='flex flex-col min-h-screen items-center bg-slate-800'>
         <Component {...pageProps} />
         <Overlay />
       </div>
