@@ -1,3 +1,31 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+    @apply text-secondary-50;
+    transition: 0.3s;
+}
+
+.menu {
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    @apply fixed rounded-xl transform bottom-2 left-8 right-8 xs:bottom-8 xs:left-1/2 xs:right-auto xs:-translate-x-1/2 before:absolute before:inset-0 before:rounded-xl before:shadow-md before:z-10
+}
+.menu__inner {
+    transition: -webkit-clip-path var(--duration) cubic-bezier(0.19, 1, 0.22, 1);
+    transition: clip-path var(--duration) cubic-bezier(0.19, 1, 0.22, 1);
+    transition: clip-path var(--duration) cubic-bezier(0.19, 1, 0.22, 1), -webkit-clip-path var(--duration) cubic-bezier(0.19, 1, 0.22, 1);
+    transition-delay: 0s;
+    -webkit-clip-path: inset(0 0 0 0 round 12px);
+    clip-path: inset(0 0 0 0 round 12px);
+    @apply relative bg-secondary-900/40 z-20 rounded-[12px] overflow-hidden
+}
+.menu__content {
+    transition: opacity var(--duration) cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    opacity: 1;
+    @apply relative w-full
+}
+.menu__content a {
+    @apply cursor-pointer flex items-center justify-center px-[18px] pb-[2px] text-[14px] font-bold h-[50px] leading-none 
+}
