@@ -9,7 +9,7 @@ const Navbar = () => {
 
     useEffect(() => {
         let route = router.asPath.split("/")[1]
-        const margin = 18
+        const margin = 24
         const linkIndex = { "": 0, "works": 1, "achivements": 2, "about": 3}
         const menuItems = document.getElementsByClassName("menu__item")
         const activeLinkIndicatior = document.getElementById("active_link_indicator")

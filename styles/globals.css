@@ -7,10 +7,14 @@
     transition: 0.3s;
 }
 
+body {
+    @apply bg-secondary-800
+}
+
 .menu {
     -webkit-backdrop-filter: blur(12px);
     backdrop-filter: blur(12px);
-    @apply fixed rounded-xl transform bottom-2 left-8 right-8 xs:bottom-8 xs:left-1/2 xs:right-auto xs:-translate-x-1/2 before:absolute before:inset-0 before:rounded-xl before:shadow-md before:z-10
+    @apply fixed rounded-xl transform bottom-2 left-8 right-8 xs:bottom-8 xs:left-1/2 xs:right-auto xs:-translate-x-1/2
 }
 .menu__inner {
     transition: -webkit-clip-path var(--duration) cubic-bezier(0.19, 1, 0.22, 1);
