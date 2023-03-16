@@ -8,9 +8,14 @@
 }
 
 body {
+    width: 100vw;
+    height: 100vh;
     @apply bg-secondary-800
 }
-
+main {
+    width: 100%;
+    height: 100%;
+}
 .menu {
     -webkit-backdrop-filter: blur(12px);
     backdrop-filter: blur(12px);
