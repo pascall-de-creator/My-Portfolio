@@ -28,7 +28,7 @@ export default function Layout({ children }) {
     <div className='main-wrapper'>
       <AnimatePresence mode="wait" initial={false}>
         <motion.div  key={asPath} variants={variants} animate="in" initial="out" exit="out">
-          <main>
+          <main className='w-screen h-screen'>
             { children }
           </main>
           <Footer/>

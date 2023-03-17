@@ -4,7 +4,6 @@ import Link from "next/link";
 
 
 const Navbar = () => {
-
     const router = useRouter();
 
     useEffect(() => {
@@ -29,24 +28,16 @@ const Navbar = () => {
                 <div className="menu__content">
                     <ul className="flex text-white">
                         <li className="flex-1 menu__item">
-                            <Link href="/">
-                                <span>Home</span>
-                            </Link>
+                            <Link href="/">Home</Link>
                         </li>
                         <li className="flex-1 menu__item">
-                            <Link href="/works">
-                                <span>Work</span>
-                            </Link>
+                            <Link href="/works">Work</Link>
                         </li>
                         <li className="flex-1 menu__item">
-                            <Link href="/achivements">
-                                <span>Achivements</span>
-                            </Link>
+                            <Link href="/achivements">Achivements</Link>
                         </li>
                         <li className="flex-1 menu__item">
-                            <Link href="/about">
-                                <span>About</span>
-                            </Link>
+                            <Link href="/about">About</Link>
                         </li>
                     </ul>
                     <div id="active_link_indicator" className="bg-primary-200 absolute left-0 bottom-1/4 w-full h-[3px] bg-white origin-left js-menu-line"></div>
