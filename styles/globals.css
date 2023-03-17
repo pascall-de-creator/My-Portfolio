@@ -8,13 +8,22 @@
 }
 
 body {
-    @apply bg-secondary-800
+    background: linear-gradient(45deg, #ea698b, #47126b);
+    @apply h-screen w-screen overflow-hidden
+}
+
+h1 {
+    @apply text-4xl xs:text-5xl sm:text-6xl font-bold xl:text-7xl
+}
+
+span {
+    @apply text-primary-400
 }
 
 .menu {
     -webkit-backdrop-filter: blur(12px);
     backdrop-filter: blur(12px);
-    @apply fixed left-0 right-0 bottom-0 transform xs:bottom-8 xs:left-1/2 xs:right-auto xs:-translate-x-1/2
+    @apply fixed left-0 right-0 bottom-0 transform xs:bottom-8 xs:left-1/2 xs:right-auto xs:-translate-x-1/2 z-50
 }
 .menu__inner {
     @apply relative bg-secondary-900/40 z-20 overflow-hidden xs:rounded-lg
@@ -24,4 +33,56 @@ body {
 }
 .menu__content a {
     @apply cursor-pointer flex items-center justify-center px-1 text-xs xs:px-[18px] pb-[2px] xs:text-[14px] font-bold h-[50px] leading-none 
+}
+.menu__content a:hover{
+    @apply text-primary-500
+}
+
+@keyframes gradient-pan {
+    from {
+        background-position: 0%;
+    }
+    to {
+        background-position: -200%;
+    }
+}
+
+.gradient-text {
+    white-space: nowrap;
+    background: linear-gradient(90deg, #00c2ff, #ff0075, #00c2ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200%;
+    animation: gradient-pan linear 3s infinite;
+}
+
+@keyframes rotate {
+    from {
+      rotate: 0deg;
+    }
+    
+    50% {
+      scale: 1 1.5;
+    }
+    
+    to {
+      rotate: 360deg;
+    }
+  }
+  
+#cursor-blob {
+    background-color: white;
+    height: 34vmax;
+    aspect-ratio: 1;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    border-radius: 50%;
+    background: linear-gradient(to right, aquamarine, mediumpurple);
+    animation: rotate 20s infinite;
+    opacity: 0.3;
+    z-index: 10;
+    filter: blur(12vmax);
+    pointer-events: none;
 }

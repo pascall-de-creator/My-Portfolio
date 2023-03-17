@@ -18,6 +18,7 @@ const Navbar = () => {
             translate(${menuItems[linkIndex[route] || 0].offsetLeft + margin}px, 0px) 
             scale(${menuItems[linkIndex[route] || 0].offsetWidth / menu.offsetWidth - (margin / menu.offsetWidth) * 2}, 1)
         `;
+        
         console.log(route)
     }, [router.asPath]);
 

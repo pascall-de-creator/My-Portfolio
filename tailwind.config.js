@@ -5,6 +5,15 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    container: {
+      padding: {
+        DEFAULT: '1rem',
+        sm: '2rem',
+        lg: '20rem',
+        xl: '20 rem',
+        '2xl': '24rem',
+      },
+    },
     extend: {
       screens: {
         'xs': '374px',
