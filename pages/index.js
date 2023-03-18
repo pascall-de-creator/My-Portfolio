@@ -22,7 +22,7 @@ export default function Home() {
 					<p className="max-w-lg mb-4">
 						I’m a software developer based in Ghana specializing in building and designing exceptional programs and software for web, mobile and desktop. 
 					</p>
-					<Link className='w-max py-4 px-10 border-[1px] rounded-md font-bold border-primary-500 hover:bg-primary-500/40' href='/about'>About Me</Link>
+					<Link className='w-max py-3 px-8 sm:py-4 sm:px-10 border-[1px] rounded-md font-bold border-primary-500 hover:bg-primary-500/40' href='/about'>About Me</Link>
 				</div>
 			</section>
 		</>
