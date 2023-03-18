@@ -17,11 +17,11 @@ h1 {
 }
 
 span {
-    @apply text-primary-400 text-xl
+    @apply text-primary-400 sm:text-xl
 }
 
 p {
-    @apply text-xl
+    @apply sm:text-xl
 }
 
 .menu {
