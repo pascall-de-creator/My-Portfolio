@@ -9,9 +9,9 @@ module.exports = {
       padding: {
         DEFAULT: '1rem',
         sm: '2rem',
-        lg: '20rem',
+        lg: '10rem',
         xl: '20 rem',
-        '2xl': '24rem',
+        '2xl': '20em',
       },
     },
     extend: {
