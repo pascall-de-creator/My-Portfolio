@@ -1,7 +1,5 @@
 import Link from "next/link"
 import { useEffect, useState } from "react"
-import { useAnimation, motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
 
 export default function Home() {
 	const [role, setRole] = useState("Websites");
@@ -11,7 +9,7 @@ export default function Home() {
 		let roleIndex = 0
 		setInterval(() => {
 			setRole(roles[roleIndex])
-		}, 30000);
+		}, 3000);
 	}, [])
 
 	return (
