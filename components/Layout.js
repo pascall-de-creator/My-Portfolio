@@ -65,7 +65,7 @@ export default function Layout({ children }) {
     <>
       <AnimatePresence mode="wait" initial={false}>
         <motion.div  key={asPath} variants={variants} animate={["center", "scaleUp"]} initial="in"  exit={["scaleDown", "out"]}>
-          <main className='w-screen h-screen bg-secondary-800'>
+          <main className='w-screen h-screen bg-secondary-800 overflow-y-auto'>
             { children }
           </main>
           <Footer/>
