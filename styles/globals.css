@@ -7,6 +7,26 @@
     transition: 0.3s;
 }
 
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    @apply bg-secondary-800
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    @apply bg-secondary-600 rounded-xl;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-secondary-700;
+  }
+
 body {
     background: linear-gradient(45deg, #ea698b, #47126b);
     @apply h-screen w-screen overflow-hidden
@@ -18,10 +38,6 @@ h1 {
 
 span {
     @apply text-primary-400 sm:text-xl
-}
-
-p {
-    @apply sm:text-xl
 }
 
 .menu {
@@ -89,4 +105,11 @@ p {
     z-index: 10;
     filter: blur(12vmax);
     pointer-events: none;
+}
+
+.card {
+    @apply w-full flex gap-4 p-6 border-2 border-secondary-700 bg-secondary-900 rounded-md
+}
+.card--icon {
+    @apply w-max h-max p-4 rounded-full bg-secondary-700
 }
