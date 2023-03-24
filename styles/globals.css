@@ -108,7 +108,7 @@ span {
 }
 
 .card {
-    @apply w-full flex gap-4 p-6 border-2 border-secondary-700 bg-secondary-900 rounded-md
+    @apply w-full flex gap-4 p-6 border-2 border-secondary-700 bg-secondary-900 rounded-md lg:aspect-square lg:flex-col
 }
 .card--icon {
     @apply w-max h-max p-4 rounded-full bg-secondary-700

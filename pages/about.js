@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import { HiLocationMarker } from 'react-icons/hi';
 import { BsFillLaptopFill } from 'react-icons/bs';
 import { FaDatabase, FaMobile } from 'react-icons/fa';
@@ -9,10 +10,10 @@ import Link from 'next/link';
 
 const About = () => {
     return (
-        <section className='p-2'>
-            <div className='p-4 flex flex-col gap-4'>
-                <div className="flex gap-4 items-center">
-                    <Image width={60} height={60} src="/logo.png" className='rounded-full'/>
+        <section className='p-2 lg:flex lg:h-screen lg:p-0 lg:px-4 gap-4'>
+            <div className='my-4 flex flex-col gap-4 lg:w-3/12 lg:h-full lg:overflow-scroll lg:p-4'>
+                <div className="flex gap-4 items-center lg:flex-col lg:items-start">
+                    <Image width={60} height={60} src="/logo.png" className='rounded-full lg:w-[200px] lg:h-[200px]'/>
                     <div>
                         <h2 className='text-2xl font-bold'>Pascal Nkornyui</h2>
                         <Link href="https://github.com/pascall-de-creator">@Pascall-de-creator</Link>
@@ -21,9 +22,6 @@ const About = () => {
                 <p className='text-base'>
                 The individual in question is a highly skilled and experienced professional with a passion for creating cutting-edge technology solutions. With 5 years of experience as a full-stack developer, UI/UX designer, mobile app developer, and software engineer, this individual possesses a diverse skill set and a deep understanding of the entire software development life cycle.
                 </p>
-                <div className="p-4 border-2 border-primary-400 bg-secondary-700 rounded-lg flex items-center justify-center">
-                    <Link href="#" className=''>View CV</Link>
-                </div>
                 <ul>
                     <li>
                         <div className='flex items-center gap-2'>
@@ -32,21 +30,24 @@ const About = () => {
                         </div>
                     </li>
                 </ul>
+                <div className="p-4 border-2 border-primary-400 bg-secondary-700 rounded-lg flex items-center justify-center">
+                    <Link href="#" className=''>View CV</Link>
+                </div>
             </div>
-            <div className='mb-[100px]'>
-                <div className='p-4 flex flex-col items-center gap-4 bg-secondary-900 rounded-lg'>
+            <div className='lg:w-9/12 mb-[100px] lg:mb-0 lg:h-full lg:overflow-scroll lg:p-4'>
+                <div className='p-4 flex flex-col items-center gap-4 bg-secondary-900 rounded-lg w-full border-2 border-secondary-700'>
                     <h2>Contributions To</h2>
                     <div className='flex flex-wrap gap-4 items-center justify-center'>
-                        <Image width={100} height={20} src="/microsoft.png" />
-                        <Image width={100} height={20} src="/vercel.png" />
-                        <Image width={100} height={20} src="/tailwind.png" />
-                        <Image width={100} height={20} src="/godot.png" />
+                        <Image className='lg:w-[130px]' width={100} height={20} src="/microsoft.png" />
+                        <Image className='lg:w-[130px]' width={100} height={20} src="/vercel.png" />
+                        <Image className='lg:w-[130px]' width={100} height={20} src="/tailwind.png" />
+                        <Image className='lg:w-[130px]' width={100} height={20} src="/godot.png" />
                     </div>
                 </div>
-                <div className='mt-4 flex flex-col items-center gap-4'>
+                <div className='mt-16 flex flex-col items-center gap-4'>
                     <h2>What I Do</h2>
-                    <div className='flex flex-wrap gap-4 items-center'>
-                    <div className="card">
+                    <div className='flex flex-wrap gap-4 items-center lg:grid lg:grid-cols-3 lg:grid-flow-row lg:items-stretch'>
+                        <div className="card">
                             <div className='card--icon'>
                                 <BsFillLaptopFill />
                             </div>
@@ -84,10 +85,10 @@ const About = () => {
                         </div>
                     </div>
                 </div>
-                <div className='mt-4 flex flex-col items-center gap-4'>
+                <div className='mt-16 flex flex-col items-center gap-4'>
                     <h2>My Skills</h2>
                     <div className='w-full flex flex-wrap gap-4 justify-between'>
-                        <ul className='list-disc'>
+                        <ul>
                             <li>
                                 <div className='flex gap-2 items-center'>
                                     <SiHtml5 />
