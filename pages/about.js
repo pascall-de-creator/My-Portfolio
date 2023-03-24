@@ -170,31 +170,18 @@ const About = () => {
                         </ul>
                     </div>
                 </div>
-                <div className='mt-4 flex flex-col items-center gap-4'>
+                <div className='mt-16 flex flex-col items-center gap-4'>
                     <h2>My Works</h2>
-                    <div className='w-full grid grid-col-3 gap-4'>
-                        <div className='w-full h-full bg-secondary-900 relative z-20'></div>
-                        <div className='aspect-video bg-secondary-600 '>01</div>
+                    <div className='w-full grid grid-col-3 grid-flow-col grid-row-2 gap-4'>
+                        <div className='bg-secondary-600 row-span-2'>01</div>
                         <div className='aspect-video bg-secondary-600 '>02</div>
-                        <div className='aspect-video bg-secondary-600 row-col-2'>03</div>
-                        <div className="p-4 border-2 border-primary-400 bg-secondary-700 rounded-lg flex items-center justify-center">
-                            <Link href="/works" className=''>See More</Link>
-                        </div>
+                        <div className='aspect-video bg-secondary-600 '>03</div>
+                    </div>
+                    <div className="p-4 border-2 border-primary-400 bg-secondary-700 rounded-lg flex items-center justify-center">
+                        <Link href="/works" className=''>See More</Link>
                     </div>
                 </div>
-                <div className='mt-4 flex flex-col items-center gap-4'>
-                    <h2>Achivements</h2>
-                    <div className='w-full grid grid-col-3 gap-4'>
-                        <div className='w-full h-full bg-secondary-900 relative z-20'></div>
-                        <div className='aspect-video bg-secondary-600 '>01</div>
-                        <div className='aspect-video bg-secondary-600 '>02</div>
-                        <div className='aspect-video bg-secondary-600 row-col-2'>03</div>
-                        <div className="p-4 border-2 border-primary-400 bg-secondary-700 rounded-lg flex items-center justify-center">
-                            <Link href="/achivements" className=''>See More</Link>
-                        </div>
-                    </div>
-                </div>
-                <div className='mt-4 flex flex-col items-center gap-4'>
+                <div className='mt-16 flex flex-col items-center gap-4'>
                     <h2>Let's Connect</h2>
                     <p>Let's connect and create something great together.</p>
                     <div className='w-full grid grid-col-3 gap-4'>
