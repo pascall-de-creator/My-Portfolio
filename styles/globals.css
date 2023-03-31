@@ -113,3 +113,15 @@ span {
 .card--icon {
     @apply w-max h-max p-4 rounded-full bg-secondary-700
 }
+
+.img-02 {
+    background-image: url("/achivements/cert (1).png");
+    background-position: center;
+    background-size: cover;
+}
+
+.project-img-02 {
+    background-image: url("/projects/project (1).png");
+    background-position: center;
+    background-size: cover;
+}
