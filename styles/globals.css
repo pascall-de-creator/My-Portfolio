@@ -39,6 +39,9 @@ h1 {
 span {
     @apply text-primary-400 sm:text-xl
 }
+.cursor-blob {
+    pointer-events: none;
+}
 
 .menu {
     -webkit-backdrop-filter: blur(12px);
